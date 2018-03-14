@@ -13,6 +13,12 @@
 		B3C46F722059ADED00BAF9A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C46F712059ADED00BAF9A8 /* Assets.xcassets */; };
 		B3C46F752059ADED00BAF9A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C46F732059ADED00BAF9A8 /* LaunchScreen.storyboard */; };
 		B3C46F802059ADED00BAF9A8 /* FeatureTogglingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C46F7F2059ADED00BAF9A8 /* FeatureTogglingTests.swift */; };
+		B3C46F8E2059AFF400BAF9A8 /* FeatureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C46F8D2059AFF400BAF9A8 /* FeatureService.swift */; };
+		B3C46F912059B08100BAF9A8 /* FeatureStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C46F902059B08100BAF9A8 /* FeatureStorage.swift */; };
+		B3C46F932059B0D600BAF9A8 /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C46F922059B0D600BAF9A8 /* Features.swift */; };
+		B3C46F952059B48A00BAF9A8 /* FeatureCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C46F942059B48A00BAF9A8 /* FeatureCache.swift */; };
+		B3C46F972059B4D900BAF9A8 /* FeatureProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C46F962059B4D900BAF9A8 /* FeatureProvider.swift */; };
+		B3C46F992059BBC300BAF9A8 /* EnumExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C46F982059BBC300BAF9A8 /* EnumExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,12 @@
 		B3C46F7B2059ADED00BAF9A8 /* FeatureTogglingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeatureTogglingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C46F7F2059ADED00BAF9A8 /* FeatureTogglingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureTogglingTests.swift; sourceTree = "<group>"; };
 		B3C46F812059ADED00BAF9A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3C46F8D2059AFF400BAF9A8 /* FeatureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureService.swift; sourceTree = "<group>"; };
+		B3C46F902059B08100BAF9A8 /* FeatureStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStorage.swift; sourceTree = "<group>"; };
+		B3C46F922059B0D600BAF9A8 /* Features.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
+		B3C46F942059B48A00BAF9A8 /* FeatureCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCache.swift; sourceTree = "<group>"; };
+		B3C46F962059B4D900BAF9A8 /* FeatureProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureProvider.swift; sourceTree = "<group>"; };
+		B3C46F982059BBC300BAF9A8 /* EnumExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +89,8 @@
 		B3C46F692059ADED00BAF9A8 /* FeatureToggling */ = {
 			isa = PBXGroup;
 			children = (
-				B3C46F6A2059ADED00BAF9A8 /* AppDelegate.swift */,
-				B3C46F6C2059ADED00BAF9A8 /* ViewController.swift */,
-				B3C46F6E2059ADED00BAF9A8 /* Main.storyboard */,
-				B3C46F712059ADED00BAF9A8 /* Assets.xcassets */,
-				B3C46F732059ADED00BAF9A8 /* LaunchScreen.storyboard */,
-				B3C46F762059ADED00BAF9A8 /* Info.plist */,
+				B3C46F8B2059AFBD00BAF9A8 /* Sources */,
+				B3C46F8A2059AFB000BAF9A8 /* Resources */,
 			);
 			path = FeatureToggling;
 			sourceTree = "<group>";
@@ -94,6 +102,56 @@
 				B3C46F812059ADED00BAF9A8 /* Info.plist */,
 			);
 			path = FeatureTogglingTests;
+			sourceTree = "<group>";
+		};
+		B3C46F8A2059AFB000BAF9A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B3C46F6E2059ADED00BAF9A8 /* Main.storyboard */,
+				B3C46F712059ADED00BAF9A8 /* Assets.xcassets */,
+				B3C46F732059ADED00BAF9A8 /* LaunchScreen.storyboard */,
+				B3C46F762059ADED00BAF9A8 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B3C46F8B2059AFBD00BAF9A8 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B3C46F6A2059ADED00BAF9A8 /* AppDelegate.swift */,
+				B3C46F9A2059BBE100BAF9A8 /* Extensions */,
+				B3C46F8C2059AFD700BAF9A8 /* Controllers */,
+				B3C46F8F2059B00900BAF9A8 /* Feature Toggling */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B3C46F8C2059AFD700BAF9A8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B3C46F6C2059ADED00BAF9A8 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B3C46F8F2059B00900BAF9A8 /* Feature Toggling */ = {
+			isa = PBXGroup;
+			children = (
+				B3C46F922059B0D600BAF9A8 /* Features.swift */,
+				B3C46F8D2059AFF400BAF9A8 /* FeatureService.swift */,
+				B3C46F962059B4D900BAF9A8 /* FeatureProvider.swift */,
+				B3C46F902059B08100BAF9A8 /* FeatureStorage.swift */,
+				B3C46F942059B48A00BAF9A8 /* FeatureCache.swift */,
+			);
+			path = "Feature Toggling";
+			sourceTree = "<group>";
+		};
+		B3C46F9A2059BBE100BAF9A8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B3C46F982059BBC300BAF9A8 /* EnumExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +257,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C46F992059BBC300BAF9A8 /* EnumExtension.swift in Sources */,
+				B3C46F912059B08100BAF9A8 /* FeatureStorage.swift in Sources */,
+				B3C46F952059B48A00BAF9A8 /* FeatureCache.swift in Sources */,
+				B3C46F972059B4D900BAF9A8 /* FeatureProvider.swift in Sources */,
+				B3C46F8E2059AFF400BAF9A8 /* FeatureService.swift in Sources */,
 				B3C46F6D2059ADED00BAF9A8 /* ViewController.swift in Sources */,
 				B3C46F6B2059ADED00BAF9A8 /* AppDelegate.swift in Sources */,
+				B3C46F932059B0D600BAF9A8 /* Features.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,12 +419,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 43B96EVZGP;
-				INFOPLIST_FILE = FeatureToggling/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FeatureToggling/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Ilya-Tsarev.FeatureToggling";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -370,12 +434,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 43B96EVZGP;
-				INFOPLIST_FILE = FeatureToggling/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FeatureToggling/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Ilya-Tsarev.FeatureToggling";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
