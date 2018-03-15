@@ -46,8 +46,7 @@ class FeatureCache {
         
         guard let features = NSKeyedUnarchiver.unarchiveObject(with: data) as? ArchivableFeaturesWithState else {
             print("FeaturesCache: couldn't load data")
-            return nil
-            
+            return nil   
         }
         
         return convertFeatures(features)

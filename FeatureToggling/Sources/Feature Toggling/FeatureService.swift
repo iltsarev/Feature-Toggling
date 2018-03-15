@@ -61,13 +61,6 @@ class FeaturesService {
     public func deleteCache() {
         storage.deleteCache()
     }
-    
-    /// Возвращает все функции для текущего пользователя
-    ///
-    /// - Returns: [Feature : Bool]
-    public func rawFeatures() -> [Feature : Bool] {
-        return storage.features()
-    }
 }
 
 extension FeaturesService {
