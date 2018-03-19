@@ -9,11 +9,26 @@
 import Foundation
 
 /// Все фичи приложения
-enum Feature: String, EnumCollection {
+enum Feature : String, EnumCollection {
     
+    // Delivery
+    case enableDelivery
     case droneDelivery
-    case cashPayment
+    case fastDelivery
+    
+    // Payment
     case firstOrderDiscount
+    case cashPayment
+    case newFeeAlgorithm
+    case applePay
+    case payViaTransfer
+    
+    // Menu
+    case sushi
+    
+    // UI
+    case curvedButtons
+    case iOS6Design
     
     static let enabledByDefault: [Feature] = [
         .cashPayment, .firstOrderDiscount

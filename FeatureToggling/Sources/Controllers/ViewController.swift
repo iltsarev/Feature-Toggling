@@ -15,18 +15,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        getFeatures()
+        printDroneDeliveryStatus()
+    }
+    
+    func getFeatures() {
         // В данном примере вызов синхронный
         featureService.getFeatures {
             print("Features are loaded")
         }
-        
+    }
+    
+    func printDroneDeliveryStatus() {
         if (featureService.enabled(.droneDelivery)) {
             print("Drone delivery is enabled")
         } else {
             print("Drone delivery is disabled")
         }
     }
-
 }
-
