@@ -9,7 +9,7 @@
 import Foundation
 
 /// Все фичи приложения
-enum Feature : String, EnumCollection {
+enum Feature: String, EnumCollection {
     
     // Delivery
     case enableDelivery

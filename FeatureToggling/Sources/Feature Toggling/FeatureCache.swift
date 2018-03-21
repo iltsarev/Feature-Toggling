@@ -21,7 +21,7 @@ class FeatureCache {
     
     /// Сохраняет данные на диск
     ///
-    /// - Parameter featuresWithState: словарь Feature : Bool
+    /// - Parameter featuresWithState: [Feature : Bool]
     /// - Returns: true / false в зависимости от того, было ли сохранение успешным
     @discardableResult
     public func saveData(_ featuresWithState: FeaturesWithState) -> Bool {
@@ -40,7 +40,7 @@ class FeatureCache {
     
     /// Загружает данные с диска
     ///
-    /// - Returns: возвращает словарь Feature : Bool
+    /// - Returns: возвращает [Feature : Bool]
     public func loadData() -> FeaturesWithState? {
         guard let data = try? Data(contentsOf: cacheFilepath) else { return nil }
         
