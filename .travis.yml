@@ -1,0 +1,4 @@
+language: swift
+osx_image: xcode9.2
+script:
+  - xcodebuild clean test -scheme FeatureToggling -project FeatureToggling.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=11.2' | xcpretty
