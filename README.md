@@ -27,8 +27,14 @@ if (featureService.enabled(.myFeature)) {
 }
 ```
 
+Authors
+--------
+
+* **Ilya Tsarev** - *Initial work* - [iltsarev](https://github.com/iltsarev)
+
+See also the list of [contributors](https://github.com/iltsarev/feature-toggling/contributors) who participated in this project.
 
 License
 --------
 
-MIT.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
