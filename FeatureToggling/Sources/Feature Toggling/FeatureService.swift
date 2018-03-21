@@ -57,7 +57,7 @@ class FeaturesService {
         }
     }
     
-    /// Очищает кеш
+    /// Очищает кэш
     public func deleteCache() {
         storage.deleteCache()
     }
@@ -70,7 +70,7 @@ extension FeaturesService {
     /// - Parameters:
     ///   - name: ключ функциональности
     ///   - enabled: флаг включено или выключено
-    ///   - updateCache: если true, то кеш будет обновлен
+    ///   - updateCache: если true, то кэш будет обновлен
     public func updateFeature(_ name: Feature, enabled: Bool, updateCache: Bool = false) {
         storage.updateFeature(name, enabled: enabled, updateCache: updateCache)
     }

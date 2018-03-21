@@ -38,7 +38,7 @@ class FeatureStorage {
     ///
     /// - Parameters:
     ///   - features: словарь функциональностей
-    ///   - updateCache: если true, то кеш будет обновлен
+    ///   - updateCache: если true, то кэш будет обновлен
     public func setFeatures(_ features: FeaturesWithState, updateCache: Bool = false) {
         featuresWithState = features
         
@@ -54,7 +54,7 @@ class FeatureStorage {
     /// - Parameters:
     ///   - name: ключ функциональности
     ///   - enabled: флаг включено или выключено
-    ///   - updateCache: если true, то кеш будет обновлен
+    ///   - updateCache: если true, то кэш будет обновлен
     public func updateFeature(_ name: Feature, enabled: Bool, updateCache: Bool = false) {
         featuresWithState[name] = enabled
         
@@ -76,16 +76,16 @@ class FeatureStorage {
                 for feature in Feature.allValues {
                     self.featuresWithState[feature] = loadedFeatures.contains(feature)
                 }
-                // обновляем данные в кеше
+                // обновляем данные в кэше
                 DispatchQueue.global(qos: .default).async {
                     self.cache.saveData(self.featuresWithState)
                 }
             } else {
-                // пробуем загрузить из кеша
+                // пробуем загрузить из кэша
                 if let loadedFeatures = self.cache.loadData() {
                     self.featuresWithState = loadedFeatures
                 } else {
-                    // в кеше нет -- берем стандартные
+                    // в кэше нет -- берем стандартные
                     self.featuresWithState = self.getDefaultFeatures()
                 }
             }
@@ -93,7 +93,7 @@ class FeatureStorage {
         })
     }
     
-    /// Очищает кеш
+    /// Очищает кэш
     public func deleteCache() {
         cache.clearData()
     }
