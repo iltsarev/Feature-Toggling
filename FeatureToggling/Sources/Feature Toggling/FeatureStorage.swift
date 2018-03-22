@@ -18,7 +18,7 @@ class FeatureStorage {
     }()
     
     fileprivate lazy var cache: FeatureCache = {
-        return FeatureCache(path: self.cacheFilepath)
+        return FeatureCache(path: cacheFilepath)
     }()
     
     fileprivate lazy var provider: FeatureProvider = {
@@ -69,7 +69,7 @@ class FeatureStorage {
     ///
     /// - Parameter completion: в completion ф-ии уже загружены
     public func getFeatures(_ completion: @escaping() -> Void) {
-        provider.fetchEnabledFeatures({ (fetchedFeatures) in
+        provider.fetchEnabledFeatures { fetchedFeatures in
             
             // Если загрузили данные с сервера, то значит они актуальные
             if let loadedFeatures = fetchedFeatures {
@@ -85,12 +85,12 @@ class FeatureStorage {
                 if let loadedFeatures = self.cache.loadData() {
                     self.featuresWithState = loadedFeatures
                 } else {
-                    // в кэше нет -- берем стандартные
+                    // в кэше нет – берем стандартные
                     self.featuresWithState = self.getDefaultFeatures()
                 }
             }
             completion()
-        })
+        }
     }
     
     /// Очищает кэш
