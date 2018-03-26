@@ -7,7 +7,7 @@ Overview
 --------
 It's a lightweight example of iOS feature toggling system inspired by [Martin Fowler](https://martinfowler.com/articles/feature-toggles.html). If you have any questions you can ask me in [telegram](https://t.me/iltsarev).
 
-You can also watch the video of my speech on [YouTube](https://youtu.be/H9Ff6R_4Mw8?t=4h45m00s).
+You can also watch the video of my speech on [YouTube](https://youtu.be/H9Ff6R_4Mw8?t=4h45m00s) (in Russian).
 
 Usage
 --------
