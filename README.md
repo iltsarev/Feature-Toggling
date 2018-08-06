@@ -24,7 +24,7 @@ featureService.getFeatures {}
 
 Check if feature is enabled:
 ``` swift
-if (featureService.enabled(.myFeature)) {
+if featureService.enabled(.myFeature) {
   // doSomething
 }
 ```
