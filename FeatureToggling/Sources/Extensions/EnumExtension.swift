@@ -18,9 +18,13 @@ public extension EnumCollection {
     public static func cases() -> AnySequence<Self> {
         return AnySequence { () -> AnyIterator<Self> in
             var raw = 0
+            var first: Self?
             return AnyIterator {
-                let current: Self = withUnsafePointer(to: &raw) { $0.withMemoryRebound(to: self, capacity: 1) { $0.pointee } }
-                guard current.hashValue == raw else {
+                let current = withUnsafeBytes(of: &raw) { $0.load(as: Self.self) }
+                
+                if raw == 0 {
+                    first = current
+                } else if current == first {
                     return nil
                 }
                 raw += 1
