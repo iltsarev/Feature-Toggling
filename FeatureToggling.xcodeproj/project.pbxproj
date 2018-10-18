@@ -18,7 +18,6 @@
 		B3C46F932059B0D600BAF9A8 /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C46F922059B0D600BAF9A8 /* Features.swift */; };
 		B3C46F952059B48A00BAF9A8 /* FeatureCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C46F942059B48A00BAF9A8 /* FeatureCache.swift */; };
 		B3C46F972059B4D900BAF9A8 /* FeatureProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C46F962059B4D900BAF9A8 /* FeatureProvider.swift */; };
-		B3C46F992059BBC300BAF9A8 /* EnumExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C46F982059BBC300BAF9A8 /* EnumExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +46,6 @@
 		B3C46F922059B0D600BAF9A8 /* Features.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
 		B3C46F942059B48A00BAF9A8 /* FeatureCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCache.swift; sourceTree = "<group>"; };
 		B3C46F962059B4D900BAF9A8 /* FeatureProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureProvider.swift; sourceTree = "<group>"; };
-		B3C46F982059BBC300BAF9A8 /* EnumExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				B3C46F6A2059ADED00BAF9A8 /* AppDelegate.swift */,
-				B3C46F9A2059BBE100BAF9A8 /* Extensions */,
 				B3C46F8C2059AFD700BAF9A8 /* Controllers */,
 				B3C46F8F2059B00900BAF9A8 /* Feature Toggling */,
 			);
@@ -144,14 +141,6 @@
 				B3C46F942059B48A00BAF9A8 /* FeatureCache.swift */,
 			);
 			path = "Feature Toggling";
-			sourceTree = "<group>";
-		};
-		B3C46F9A2059BBE100BAF9A8 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				B3C46F982059BBC300BAF9A8 /* EnumExtension.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +246,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3C46F992059BBC300BAF9A8 /* EnumExtension.swift in Sources */,
 				B3C46F912059B08100BAF9A8 /* FeatureStorage.swift in Sources */,
 				B3C46F952059B48A00BAF9A8 /* FeatureCache.swift in Sources */,
 				B3C46F972059B4D900BAF9A8 /* FeatureProvider.swift in Sources */,
