@@ -80,7 +80,7 @@ extension FeatureCache {
     
     /// Приводит данные к виду [Feature : Bool]
     func convertFeatures(_ features: ArchivableFeaturesWithState) -> FeaturesWithState {
-        let featureTuples = features.flatMap { (key, value) -> (Feature, Bool)? in
+        let featureTuples = features.compactMap { (key, value) -> (Feature, Bool)? in
             guard let feature = Feature(rawValue: key) else { return nil }
             return (feature, value)
         }
