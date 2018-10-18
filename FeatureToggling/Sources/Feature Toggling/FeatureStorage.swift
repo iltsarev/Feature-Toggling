@@ -73,7 +73,7 @@ class FeatureStorage {
             
             // Если загрузили данные с сервера, то значит они актуальные
             if let loadedFeatures = fetchedFeatures {
-                for feature in Feature.allValues {
+                for feature in Feature.allCases {
                     self.featuresWithState[feature] = loadedFeatures.contains(feature)
                 }
                 // обновляем данные в кэше
